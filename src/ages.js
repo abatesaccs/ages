@@ -23,17 +23,17 @@ export class Age{
         let temp = (this.age.toFixed(2) / this.jupiter);
         return temp;
     }
-    lifeExpectancy(age, planet){
+    lifeExpectancy(planet){
         let averageAge = 71;
         let choice = planet.toLowerCase();
         if(choice == "mercury"){
-            return ((averageAge / this.mercury) - age);
+            return (((averageAge - this.age) / this.mercury));
         } else if (choice == "venus"){
-            return ((averageAge / this.venus) - age);
+            return (((averageAge - this.age) / this.venus));
         } else if (choice == "mars"){
-            return ((averageAge / this.mars) - age);
+            return (((averageAge - this.age) / this.mars));
         } else if (choice == "jupiter"){
-            return ((averageAge / this.jupiter) - age);
+            return (((averageAge - this.age) / this.jupiter));
         }
     }
 };
