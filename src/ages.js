@@ -27,13 +27,25 @@ export class Age{
         let averageAge = 71;
         let choice = planet.toLowerCase();
         if(choice == "mercury"){
-            return (((averageAge - this.age) / this.mercury));
+            if (this.age > averageAge){
+                return ((this.age - averageAge) / this.mercury);
+            }
+            return ((averageAge - this.age) / this.mercury);
         } else if (choice == "venus"){
-            return (((averageAge - this.age) / this.venus));
+            if (this.age > averageAge){
+                return ((this.age - averageAge) / this.venus);
+            }
+            return ((averageAge - this.age) / this.venus);
         } else if (choice == "mars"){
-            return (((averageAge - this.age) / this.mars));
+            if (this.age > averageAge){
+                return ((this.age - averageAge) / this.mars);
+            }
+            return ((averageAge - this.age) / this.mars);
         } else if (choice == "jupiter"){
-            return (((averageAge - this.age) / this.jupiter));
+            if (this.age > averageAge){
+                return ((this.age - averageAge) / this.jupiter);
+            }
+            return ((averageAge - this.age) / this.jupiter);
         }
     }
-};
+}
