@@ -20,6 +20,9 @@ describe ('Ages', () => {
         let myAge = new Age(1);
         expect(myAge.toJupiter(1)).toEqual(1/11.86);
     });
+});
+
+describe ('life expectancy', () => {
     test('should check that mercurys life expectancy is correct', () => {
         let myAge = new Age(1);
         expect(myAge.lifeExpectancy("mercury")).toEqual(((71 / .24) - (1/.24)));
@@ -35,5 +38,24 @@ describe ('Ages', () => {
     test('should check that jupiters life expectancy is correct', () => {
         let myAge = new Age(1);
         expect(myAge.lifeExpectancy("jupiter")).toEqual(((71 / 11.86) - (1/11.86)));
+    });
+});
+
+describe ('exceeded life expectancy', () => {
+    test('should return years lived past life expectancy', () => {
+        let myAge = new Age(72);
+        expect(myAge.lifeExpectancy("mercury")).toBeCloseTo(((72 / .24) - (71/.24)), 8);
+    });
+    test('should return years lived past life expectancy', () => {
+        let myAge = new Age(72);
+        expect(myAge.lifeExpectancy("venus")).toBeCloseTo(((72 / .62) - (71/.62)), 8);
+    });
+    test('should return years lived past life expectancy', () => {
+        let myAge = new Age(72);
+        expect(myAge.lifeExpectancy("mars")).toBeCloseTo(((72 / 1.88) - (71/1.88)), 8);
+    });
+    test('should return years lived past life expectancy', () => {
+        let myAge = new Age(72);
+        expect(myAge.lifeExpectancy("jupiter")).toBeCloseTo(((72 / 11.86) - (71/11.86)), 8);
     });
 });
