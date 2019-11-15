@@ -27,16 +27,16 @@ describe ('life expectancy', () => {
         myAge = new Age(1);
       });
     test('should check that mercurys life expectancy is correct', () => {
-        expect(myAge.lifeExpectancy("mercury")).toEqual(((71 / .24) - (1/.24)));
+        expect(myAge.lifeExpectancy("mercury")).toEqual(((71 / .24) - (1/.24)).toFixed(2));
     });
     test('should check that venus life expectancy is correct', () => {
-        expect(myAge.lifeExpectancy("venus")).toEqual(((71 / .62) - (1/.62)));
+        expect(myAge.lifeExpectancy("venus")).toEqual(((71 / .62) - (1/.62)).toFixed(2));
     });
     test('should check that mars life expectancy is correct', () => {
-        expect(myAge.lifeExpectancy("mars")).toEqual(((71 / 1.88) - (1/1.88)));
+        expect(myAge.lifeExpectancy("mars")).toEqual(((71 / 1.88) - (1/1.88)).toFixed(2));
     });
     test('should check that jupiters life expectancy is correct', () => {
-        expect(myAge.lifeExpectancy("jupiter")).toEqual(((71 / 11.86) - (1/11.86)));
+        expect(myAge.lifeExpectancy("jupiter")).toEqual(((71 / 11.86) - (1/11.86)).toFixed(2));
     });
 });
 
@@ -46,15 +46,15 @@ describe ('exceeded life expectancy', () => {
         myOldAge = new Age(75);
       });
     test('should return years lived past life expectancy', () => {
-        expect(myOldAge.lifeExpectancy("mercury")).toBeCloseTo(((75 / .24) - (71/.24)), 8);
+        expect(myOldAge.lifeExpectancy("mercury")).toBe(((75 / .24) - (71/.24)).toFixed(2));
     });
     test('should return years lived past life expectancy', () => {
-        expect(myOldAge.lifeExpectancy("venus")).toBeCloseTo(((75 / .62) - (71/.62)), 8);
+        expect(myOldAge.lifeExpectancy("venus")).toBe(((75 / .62) - (71/.62)).toFixed(2));
     });
     test('should return years lived past life expectancy', () => {
-        expect(myOldAge.lifeExpectancy("mars")).toBeCloseTo(((75 / 1.88) - (71/1.88)), 8);
+        expect(myOldAge.lifeExpectancy("mars")).toBe(((75 / 1.88) - (71/1.88)).toFixed(2));
     });
     test('should return years lived past life expectancy', () => {
-        expect(myOldAge.lifeExpectancy("jupiter")).toBeCloseTo(((75 / 11.86) - (71/11.86)), 8);
+        expect(myOldAge.lifeExpectancy("jupiter")).toBe(((75 / 11.86) - (71/11.86)).toFixed(2));
     });
 });

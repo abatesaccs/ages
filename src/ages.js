@@ -26,26 +26,34 @@ export class Age{
     lifeExpectancy(planet){
         let averageAge = 71;
         let choice = planet.toLowerCase();
+        let result = 0;
         if(choice == "mercury"){
             if (this.age > averageAge){
-                return ((this.age - averageAge) / this.mercury);
+                result = ((this.age - averageAge) / this.mercury).toFixed(2);
+                return result;
             }
-            return ((averageAge - this.age) / this.mercury);
+            result = ((averageAge - this.age) / this.mercury).toFixed(2);
+            return result;
         } else if (choice == "venus"){
             if (this.age > averageAge){
-                return ((this.age - averageAge) / this.venus);
-            }
-            return ((averageAge - this.age) / this.venus);
+                result = ((this.age - averageAge) / this.venus).toFixed(2);
+                return result;            }
+                result = ((averageAge - this.age) / this.venus).toFixed(2);
+                return result;
         } else if (choice == "mars"){
             if (this.age > averageAge){
-                return ((this.age - averageAge) / this.mars);
+                result = ((this.age - averageAge) / this.mars).toFixed(2);
+                return result;
             }
-            return ((averageAge - this.age) / this.mars);
+            result = ((averageAge - this.age) / this.mars).toFixed(2);
+            return result;
         } else if (choice == "jupiter"){
             if (this.age > averageAge){
-                return ((this.age - averageAge) / this.jupiter);
+                result = ((this.age - averageAge) / this.jupiter).toFixed(2);
+                return result;
             }
-            return ((averageAge - this.age) / this.jupiter);
+            result = ((averageAge - this.age) / this.jupiter).toFixed(2);
+            return result;
         }
     }
 }
