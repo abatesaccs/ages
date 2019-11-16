@@ -44,7 +44,7 @@ _Spec: return life expectancy minus years lived in jupiter years._
 
 ## Setup/Installation Requirements
 
-* _note: there is currently no UI._
+* ## Note: there is currently no UI.
 
 * _Go to https://github.com/abatesaccs/ages_
 * _Clone or download all files in the repository (make sure they are contained in the same file!)_
