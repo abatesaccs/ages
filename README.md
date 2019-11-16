@@ -1,6 +1,6 @@
 # _Super Galactic Age Calculator_
 
-#### _An age calculator for the first five planets. 11/1/2019_
+#### _An age calculator for the first five planets. 11/15/2019_
 
 #### By _**Andrew Bates**_
 

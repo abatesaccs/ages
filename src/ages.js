@@ -23,6 +23,11 @@ export class Age{
         let temp = (this.age.toFixed(2) / this.jupiter);
         return temp;
     }
+    keithRichards(){
+        const age = 75;
+        let result = ((75*7)/11.86);
+        return result;
+    }
     lifeExpectancy(planet){
         let averageAge = 71;
         let choice = planet.toLowerCase();

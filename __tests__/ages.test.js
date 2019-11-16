@@ -58,3 +58,10 @@ describe ('exceeded life expectancy', () => {
         expect(myOldAge.lifeExpectancy("jupiter")).toBe(((75 / 11.86) - (71/11.86)).toFixed(2));
     });
 });
+
+describe ('keith richards in dog years on jupiter', () => {
+    test('should return years lived times seven all divided by 11.86', () => {
+        let age = new Age(75);
+        expect(age.keithRichards()).toBe(((75*7)/11.86));
+    });
+});
